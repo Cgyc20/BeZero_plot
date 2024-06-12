@@ -1,6 +1,1 @@
-Please run
-
-
-source env/bin/activate 
-
-to activate virtual environment
+Please run the the run.py file with a certain index
