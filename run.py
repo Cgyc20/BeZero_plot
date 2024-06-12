@@ -1,9 +1,14 @@
 import matplotlib.pyplot as plt
 from import_data import ImportData
+import os
 
-filename = 'Archive' #The filename (must be in current directory)
 
-model = ImportData(filename) #Initialise the class
+current_dir = os.path.dirname(os.path.abspath(__file__))  # Current directory where script is located
+parent_dir = os.path.dirname(current_dir)  # Parent directory
+archive_dir = os.path.join(parent_dir, 'Archive')  # 'Archive' directory i
+
+
+model = ImportData(archive_dir) #Initialise the class
 
 sorted_list = model.sort_timesteps() #Sort the timesteps from the least Nan values to the most (better to plot with). Choose the index whi
 
