@@ -156,8 +156,9 @@ class ImportData:
         xvalues = single_time_patch.coords['x']
         yvalues = single_time_patch.coords['y']
 
-        plt.imshow(ARR, extent=(xvalues.min(), xvalues.max(), yvalues.min(), yvalues.max()), origin='lower')
+        plt.imshow(ARR, cmap='summer_r')
         plt.colorbar()
-        plt.xlabel('Lat')
-        plt.ylabel('Lon')
+        plt.title('NDVI')
+        plt.xlabel('X-axis')
+        plt.ylabel('Y-axis')
         plt.show()
