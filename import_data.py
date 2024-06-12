@@ -144,7 +144,7 @@ class ImportData:
 
         """THis will literally print the time for that particular timestep """
 
-        print(self.masked_patch['time'][index])
+        return self.masked_patch['time'][index]
 
     def plot_NDVI(self, index):
         """"This will plot the NDVI data"""
@@ -158,7 +158,7 @@ class ImportData:
 
         plt.imshow(ARR, cmap='summer_r')
         plt.colorbar()
-        plt.title('NDVI')
+        plt.title(f'NDVI at {self.time_for_index(index).values}')
         plt.xlabel('X-axis')
         plt.ylabel('Y-axis')
         plt.show()

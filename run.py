@@ -17,7 +17,8 @@ for elements in sorted_list:
 
 #Note that the first element in the list (within the list) is the time index.
 #THe second value is the number of non Nan-Values
-model.time_for_index(31)
+time_val = model.time_for_index(31)
+print(time_val)
 
 model.plot_NDVI(31)
 
